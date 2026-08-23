@@ -3,42 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#111111">
-  <meta name="description" content="EAZY — discover deals, everyday essentials and more.">
+  <meta name="theme-color" content="#ff5a1f">
+  <meta name="description" content="EAZY — shop deals, discover products and save more.">
   <title>EAZY — Shop Easy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/eazy.css">
 </head>
 <body>
-  <div class="top-strip">🔥 Free delivery on selected orders · New deals every day</div>
+  <div class="top-strip">🔥 New deals every day · Free delivery on selected orders</div>
 
   <header class="site-header">
     <div class="header-main container">
       <button class="icon-btn mobile-menu" aria-label="Open menu">☰</button>
       <a class="logo" href="index.html">EAZY<span>.</span></a>
       <div class="search-wrap">
-        <span>⌕</span>
-        <input id="searchInput" type="search" placeholder="Search products, brands and categories..." autocomplete="off">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search for products, brands and more" autocomplete="off">
         <button id="searchButton">Search</button>
       </div>
       <div class="header-actions">
         <button class="header-link" id="accountBtn">♙ <span>Account</span></button>
         <button class="header-link" id="wishlistBtn">♡ <span>Wishlist</span></button>
-        <button class="cart-btn" id="cartBtn">🛒 <b id="cartCount">0</b></button>
+        <button class="cart-btn" id="cartBtn">🛒<b id="cartCount">0</b></button>
       </div>
     </div>
     <nav class="category-nav">
       <div class="container nav-inner">
-        <button class="all-categories">☰ All Categories</button>
-        <a href="#deals">Flash Deals</a>
-        <a href="#categories">Electronics</a>
-        <a href="#categories">Fashion</a>
-        <a href="#categories">Home & Living</a>
-        <a href="#categories">Beauty</a>
-        <a href="#categories">Phones & Accessories</a>
-        <a href="#products">New Arrivals</a>
+        <button class="all-categories">☰ Categories</button>
+        <a href="#deals">🔥 Flash Deals</a><a href="#categories">Electronics</a><a href="#categories">Fashion</a><a href="#categories">Beauty</a><a href="#categories">Home & Living</a><a href="#categories">Phones</a><a href="#products">New Arrivals</a>
       </div>
     </nav>
   </header>
@@ -46,61 +40,54 @@
   <main>
     <section class="hero container">
       <div class="hero-copy">
-        <p class="eyebrow">THE NEW WAY TO SHOP</p>
-        <h1>Everything you want.<br><strong>Made EAZY.</strong></h1>
-        <p>Discover everyday products, great prices and fresh deals — all in one place.</p>
-        <div class="hero-actions">
-          <a class="primary-btn" href="#products">Shop now <span>→</span></a>
-          <a class="text-btn" href="#deals">Explore deals</a>
-        </div>
+        <span class="hero-kicker">TODAY'S EAZY DEAL</span>
+        <h1>Big deals.<br><strong>Small prices.</strong></h1>
+        <p>Discover products you love at prices you'll love even more.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#deals">Shop deals <span>→</span></a><span class="hero-note">Limited-time offers</span></div>
       </div>
       <div class="hero-art">
-        <div class="hero-badge">UP TO <strong>50%</strong><small>OFF</small></div>
-        <div class="floating-card card-one">🎧<span>Tech picks</span></div>
-        <div class="floating-card card-two">👟<span>Fresh styles</span></div>
-        <div class="hero-product">📦</div>
+        <div class="hero-burst"><small>UP TO</small><strong>70%</strong><small>OFF</small></div>
+        <div class="hero-product">🛍️</div>
+        <div class="floating-card card-one">🎧 <span>Tech deals</span></div>
+        <div class="floating-card card-two">👟 <span>Fresh styles</span></div>
       </div>
     </section>
 
+    <section class="quick-links container">
+      <div><b>🚚</b><span><strong>Free delivery</strong><small>Selected orders</small></span></div>
+      <div><b>⚡</b><span><strong>Daily deals</strong><small>New offers every day</small></span></div>
+      <div><b>🔒</b><span><strong>Secure shopping</strong><small>Shop with confidence</small></span></div>
+      <div><b>↩</b><span><strong>Easy returns</strong><small>Simple order support</small></span></div>
+    </section>
+
     <section class="section container" id="categories">
-      <div class="section-heading"><div><p class="eyebrow">BROWSE</p><h2>Shop by category</h2></div><a href="#products">View all →</a></div>
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE</p><h2>Categories for you</h2></div><a href="#products">View all →</a></div>
       <div class="category-grid" id="categoryGrid"></div>
     </section>
 
     <section class="deal-section" id="deals">
       <div class="container">
-        <div class="section-heading light"><div><p class="eyebrow">LIMITED TIME</p><h2>Flash deals</h2></div><div class="countdown" id="countdown">Ends soon</div></div>
-        <div class="product-grid" id="dealGrid"></div>
+        <div class="deal-heading"><div><p class="eyebrow">🔥 LIMITED TIME</p><h2>Flash Sale</h2><p>Grab it before it's gone!</p></div><div class="countdown" id="countdown">Ends soon</div></div>
+        <div class="deal-scroll" id="dealGrid"></div>
       </div>
     </section>
 
     <section class="section container" id="products">
-      <div class="section-heading"><div><p class="eyebrow">DISCOVER</p><h2>Popular right now</h2></div><div class="filter-pills"><button class="active">All</button><button>Trending</button><button>Top rated</button></div></div>
+      <div class="section-heading"><div><p class="eyebrow">JUST FOR YOU</p><h2>Recommended</h2></div><div class="filter-pills"><button class="active">For you</button><button>Trending</button><button>Top rated</button></div></div>
       <div class="product-grid" id="productGrid"></div>
     </section>
 
-    <section class="trust-section">
-      <div class="container trust-grid">
-        <div><span>🚚</span><div><strong>Delivery made simple</strong><p>Reliable delivery options for your orders.</p></div></div>
-        <div><span>🔒</span><div><strong>Secure shopping</strong><p>Your account and orders stay protected.</p></div></div>
-        <div><span>↩</span><div><strong>Shop with confidence</strong><p>Clear order and return information.</p></div></div>
-      </div>
-    </section>
+    <section class="promo-strip container"><div><span>✨</span><div><strong>More to love on EAZY</strong><p>Find more products, more choices and more deals.</p></div></div><a href="#products">Explore now →</a></section>
+    <div class="bottom-space"></div>
   </main>
 
-  <div class="bottom-nav">
-    <a href="#">⌂<span>Home</span></a><a href="#categories">▦<span>Categories</span></a><button id="bottomCart">🛒<span>Cart</span><b id="bottomCartCount">0</b></button><a href="#deals">⚡<span>Deals</span></a><button id="bottomAccount">♙<span>Account</span></button>
-  </div>
+  <nav class="bottom-nav">
+    <a class="active" href="#">⌂<span>Home</span></a><a href="#categories">▦<span>Categories</span></a><button id="bottomCart">🛒<span>Cart</span><b id="bottomCartCount">0</b></button><a href="#deals">⚡<span>Deals</span></a><button id="bottomAccount">♙<span>Me</span></button>
+  </nav>
 
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
-  <aside class="cart-drawer" id="cartDrawer">
-    <div class="drawer-head"><h2>Your cart</h2><button id="closeCart">×</button></div>
-    <div id="cartItems" class="cart-items"></div>
-    <div class="cart-footer"><div><span>Subtotal</span><strong id="cartTotal">₦0</strong></div><button class="primary-btn full">Checkout <span>→</span></button></div>
-  </aside>
-
+  <aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><h2>Your cart</h2><button id="closeCart">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-footer"><div><span>Subtotal</span><strong id="cartTotal">₦0</strong></div><button class="primary-btn full">Checkout <span>→</span></button></div></aside>
   <div class="toast" id="toast"></div>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/data.js"></script><script src="js/app.js"></script>
 </body>
 </html>
